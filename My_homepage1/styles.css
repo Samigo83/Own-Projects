@@ -1,8 +1,72 @@
+@import url("reset.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
-    background-color: black;
-    /*background-image: url("images/bg.jpg");*/
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("images/bg.jpg");
+    color: white;
 }
 
-img {
+body > img {
     position: absolute;
+    z-index: -1;
+}
+
+.login-card {
+    width: 450px;
+    background-color: rgba(150, 200, 255, .5);
+    padding: 4rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.login-card::before {
+    content: '';
+    position: absolute;
+    background: rgba(150, 200, 255, .25);
+    inset: 0;
+    transform: rotate(-5deg);
+    z-index: -1;
+}
+
+.login-card-logo {
+    margin-bottom: 2rem;
+}
+
+.login-card-logo > img {
+    width: 60px;
+}
+
+.login-card-logo,
+.login-card-header,
+.login-card-footer {
+    text-align: center;
+}
+
+.login-card a {
+    text-decoration: none;
+    color: white;
+}
+
+.login-card a:hover {
+    text-decoration: underline;
+}
+
+.login-card-header {
+    margin-bottom: 2rem;
+}
+
+.login-card-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.form-item-icon {
+    color: white;
 }

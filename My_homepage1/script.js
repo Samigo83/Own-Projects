@@ -23,12 +23,12 @@ function delay(time) {
   }
 
 function blinkingStars() {
-    let randomStar = Math.floor(Math.random() * 39);
+    let randomStar = Math.floor(Math.random() * 59);
     let star = document.getElementsByClassName(`star${randomStar}`);
-    star[0].src = 'images/blinking_star1.gif';
-    delay(3000).then(() => {star[0].src = "images/star.png"});
+    star[0].src = 'images/blinking_star2.gif';
+    delay(2000).then(() => {star[0].src = "images/star.png"});
 }
 
-randomStars(40);
+randomStars(60);
 
-setInterval(blinkingStars, 5000);
+setInterval(blinkingStars, 2000);
